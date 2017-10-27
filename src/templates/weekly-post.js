@@ -10,14 +10,14 @@ const WeeklyPostRoute = (props) => {
       return card.parent === listId
     }).map(card => {
       return (
-        <div>
+        <div key={card.id}>
           <h2>{card.name}</h2>
           <p>{card.desc}</p>
         </div>
       )
     })
     return (
-      <div>
+      <div key={list.id}>
         <h1> {list.name} </h1>
         {cards}
       </div>

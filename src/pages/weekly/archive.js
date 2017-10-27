@@ -7,8 +7,10 @@ const Archive = (props) => {
   const posts = props.data.allTrelloBoard.edges
   const list = posts.map(post => {
     return (
-      <li>
-        <h1 key={post.node.id}> {post.node.name} </h1>
+      <li key={post.node.id}>
+        <Link to={`/weekly/${post.node.id}`}>
+          <h1 key={post.node.id}> {post.node.name} </h1>
+        </Link>
       </li>
    )
   })
