@@ -1710,12 +1710,12 @@ caniuse-api@^1.5.2, caniuse-api@^1.5.3:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000752"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000752.tgz#daa129d54ce700e94ad14388bdef514ec1e2dd54"
+  version "1.0.30000755"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000755.tgz#a08c547c39dbe4ad07dcca9763fcbbff0c891de0"
 
 caniuse-lite@^1.0.30000744:
-  version "1.0.30000752"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000752.tgz#0a79df520669d92ddc7f57406eed935948263130"
+  version "1.0.30000755"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000755.tgz#9ce5f6e06bd75ec8209abe8853c3beef02248d65"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -2294,8 +2294,8 @@ cross-env@^3.1.1:
     is-windows "^1.0.0"
 
 cross-env@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.1.0.tgz#1f12d6b3777d5847dcf9cf39fbee3c6a76dd5058"
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.1.1.tgz#b6d8ab97f304c0f71dae7277b75fe424c08dfa74"
   dependencies:
     cross-spawn "^5.1.0"
     is-windows "^1.0.0"
@@ -2347,10 +2347,6 @@ crypto-browserify@^3.11.0:
     pbkdf2 "^3.0.3"
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
-
-crypto@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/crypto/-/crypto-1.0.1.tgz#2af1b7cad8175d24c8a1b0778255794a21803037"
 
 css-color-function@^1.2.0:
   version "1.3.3"
@@ -3821,18 +3817,17 @@ gatsby-source-medium@^1.0.7:
     babel-runtime "^6.26.0"
 
 gatsby-source-trello@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-source-trello/-/gatsby-source-trello-1.0.3.tgz#02434f0c3e79a20ef06d4d876eba41cada24f01b"
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-source-trello/-/gatsby-source-trello-1.0.7.tgz#7e957975530f63ec2a19cf66275b9596c6413acc"
   dependencies:
     babel-cli "^6.26.0"
     cross-env "^5.1.0"
-    crypto "^1.0.1"
     request "^2.83.0"
     request-promise-native "^1.0.5"
 
 gatsby-transformer-remark@^1.7.17:
-  version "1.7.17"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.17.tgz#2586ec84f34d8836f918b37bd56eece8a4aabad2"
+  version "1.7.18"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.18.tgz#83ffd7789f9d314fa77e87895a0cd0718789b1d5"
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.0"
@@ -3862,8 +3857,8 @@ gatsby-transformer-sharp@1.6.8:
     image-size "^0.6.0"
 
 gatsby@^1.9.45:
-  version "1.9.80"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.80.tgz#99baae0a4c20ef580e5d4b92056deb3539ae8367"
+  version "1.9.82"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.82.tgz#b6b06bdb71ce342d2abac924dbb6ea13c6641442"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"

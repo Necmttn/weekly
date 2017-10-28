@@ -6,26 +6,8 @@ const WeeklyPostRoute = (props) => {
   console.log(props)
   const segments = data.lists.map(list => {
     return (
-      <Segment data={list} cards={data.cards} />
+      <Segment list={list}/>
     )
-    // const listId = list.id
-    // // get cards for this list
-    // const cards = data.cards.filter(card => {
-    //   return card.parent === listId
-    // }).map(card => {
-    //   return (
-    //     <div key={card.id}>
-    //       <h2>{card.name}</h2>
-    //       <p>{card.desc}</p>
-    //     </div>
-    //   )
-    // })
-    // return (
-    //   <div key={list.id}>
-    //     <h1> {list.name} </h1>
-    //     {cards}
-    //   </div>
-    // )
   })
   return (
     <div>
@@ -50,12 +32,14 @@ query getWeeklyById($id: String!) {
         name lists {
           id
           name
-        }
-        cards {
-          id
-          parent
-          name
-          desc
+          cards {
+            id
+            name
+            childMarkdownRemark {
+              id
+              html
+            }
+          }
         }
       }
     }

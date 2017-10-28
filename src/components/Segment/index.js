@@ -3,17 +3,15 @@ import Card from '../Card'
 
 // a.k.a each list
 const Segment = (props) => {
-  const data = props.data
-  const cards = props.cards.filter(card => {
-    return card.parent === data.id
-  }).map(card => {
+  const list = props.list
+  const cards = list.cards.map(card => {
     return (
-      <Card data={card} />
+      <Card card={card} />
     )
   })
   return (
-    <div key={data.id}>
-      <h1> {data.name} </h1>
+    <div key={list.id}>
+      <h1> {list.name} </h1>
       {cards}
     </div>
   )
