@@ -14,13 +14,31 @@ const BlogPostRoute = (props) => {
 
 
 export default BlogPostRoute
+
+//  base on i18n.
+// export const pageQuery = graphql`
+//   query BlogPostByPath($path: String!) {
+//     markdownRemark(fields: {slug: {eq: $path}}) {
+//       fileAbsolutePath
+//       html
+//       excerpt
+//       frontmatter {
+//         title
+//       }
+//     }
+//   }
+// `;
+
+
+
+
+
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(fields: {slug: {eq: $path}}) {
-      fileAbsolutePath
+query BlogPostByPath($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
-      excerpt
       frontmatter {
+        path
         title
       }
     }

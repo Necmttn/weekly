@@ -43,31 +43,32 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyForNull: 'any',
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
-        markdownRemark: {
-          postPage: 'src/templates/blog-post.js',
-          query: `
-          {
-              allMarkdownRemark {
-                  edges {
-                  node {
-                      fields {
-                      slug,
-                      langKey
-                      }
-                  }
-                  }
-              }
-          }
-          `
-        }
-      }
-    },
+    // TODO: it's not works with trello
+    // {
+    //   resolve: 'gatsby-plugin-i18n',
+    //   options: {
+    //     langKeyForNull: 'any',
+    //     langKeyDefault: 'en',
+    //     useLangKeyLayout: false,
+    //     markdownRemark: {
+    //       postPage: 'src/templates/blog-post.js',
+    //       query: `
+    //       {
+    //           allMarkdownRemark {
+    //               edges {
+    //               node {
+    //                   fields {
+    //                   slug,
+    //                   langKey
+    //                   }
+    //               }
+    //               }
+    //           }
+    //       }
+    //       `
+    //     }
+    //   }
+    // },
     `gatsby-plugin-styled-components`
   ],
 }
