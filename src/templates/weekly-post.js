@@ -1,27 +1,31 @@
 import React from 'react'
+import Segment from '../components/Segment'
 
 const WeeklyPostRoute = (props) => {
   const data = props.data.allTrelloBoard.edges[0].node
   console.log(props)
   const segments = data.lists.map(list => {
-    const listId = list.id
-    // get cards for this list
-    const cards = data.cards.filter(card => {
-      return card.parent === listId
-    }).map(card => {
-      return (
-        <div key={card.id}>
-          <h2>{card.name}</h2>
-          <p>{card.desc}</p>
-        </div>
-      )
-    })
     return (
-      <div key={list.id}>
-        <h1> {list.name} </h1>
-        {cards}
-      </div>
+      <Segment data={list} cards={data.cards} />
     )
+    // const listId = list.id
+    // // get cards for this list
+    // const cards = data.cards.filter(card => {
+    //   return card.parent === listId
+    // }).map(card => {
+    //   return (
+    //     <div key={card.id}>
+    //       <h2>{card.name}</h2>
+    //       <p>{card.desc}</p>
+    //     </div>
+    //   )
+    // })
+    // return (
+    //   <div key={list.id}>
+    //     <h1> {list.name} </h1>
+    //     {cards}
+    //   </div>
+    // )
   })
   return (
     <div>
@@ -43,7 +47,8 @@ query getWeeklyById($id: String!) {
     edges {
       node {
         id
-        name lists { id
+        name lists {
+          id
           name
         }
         cards {
