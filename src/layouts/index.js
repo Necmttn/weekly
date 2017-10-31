@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
+import '../static/font/FiraCode_1.204/fira_code.css'
 import './index.css'
+require('prismjs/themes/prism-okaidia.css')
 
 const Header = () => (
   <div
