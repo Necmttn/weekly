@@ -33,15 +33,15 @@ export default BlogPostRoute
 
 
 
-export const pageQuery = graphql`
-query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        path
-        title
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+// query BlogPostByPath($path: String!) {
+//     markdownRemark(frontmatter: { path: { eq: $path } }) {
+//       html
+//       frontmatter {
+//         path
+//         title
+//       }
+//     }
+//   }
+// `;
 

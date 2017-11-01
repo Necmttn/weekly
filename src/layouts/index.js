@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-
+import styled from 'styled-components'
 import '../static/font/FiraCode_1.204/fira_code.css'
 import './index.css'
 require('prismjs/themes/prism-okaidia.css')
@@ -29,7 +29,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-         Weekly
+         Base
         </Link>
       </h1>
     </div>
@@ -46,21 +46,23 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <Container>
       {children()}
-    </div>
+    </Container>
   </div>
 )
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
 }
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0px 1.0875rem 1.45rem;
+`
+
 
 export default TemplateWrapper

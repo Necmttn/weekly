@@ -1,19 +1,11 @@
 import React from 'react'
 import Segment from '../components/Segment'
+import Weekly from '../layouts/weekly'
 
 const WeeklyPostRoute = (props) => {
   const data = props.data.allTrelloBoard.edges[0].node
-  console.log(props)
-  const segments = data.lists.map(list => {
-    return (
-      <Segment list={list}/>
-    )
-  })
   return (
-    <div>
-      <h1> { data.name }</h1>
-      {segments}
-    </div>
+      <Weekly data={data} />
   )
 }
 
@@ -38,6 +30,11 @@ query getWeeklyById($id: String!) {
             childMarkdownRemark {
               id
               html
+              frontmatter {
+                tags
+                image
+                link
+              }
             }
           }
         }
